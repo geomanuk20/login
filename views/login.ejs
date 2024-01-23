@@ -1,0 +1,39 @@
+<!-- views/login.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  
+  <div id="div1" class="container mt-5 ">
+    <h1>Login</h1>
+    <form method="post" action="/login">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" pattern=".+@gmail\.com" class="form-control" id="username"  value='geomanuk20@gmail.com' name="username" placeholder="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" value="123456" placeholder="password" required >
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+<!--
+  // second method
+  <script type="text/javascript">
+    function preventBack() {
+        window.history.backward();
+    }
+    setTimeout ("preventBack()" ,0.005);
+
+    window.onunload = function () { null };
+</script>
+-->
+</body>
+</html>

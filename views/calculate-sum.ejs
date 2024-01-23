@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate Sum</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <form id="div1" class="container mt-5"  method="post">
+    <label for="numbers">Enter numbers (comma-separated): </label>
+    <input type="text" id="numbers" name="numbers">
+    <button type="button" onclick="calculateSum()">Calculate Sum</button>
+  </form>
+
+  <script>
+    function calculateSum() {
+      const numbersInput = document.getElementById('numbers').value;
+      const numbersArray = numbersInput.split(',').map(Number);
+
+      fetch('http://localhost:3010/calculate-sum', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ numbers: numbersArray }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Sum: ' + data.sum);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</body>
+</html>

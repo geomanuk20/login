@@ -1,0 +1,30 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+ 
+  <div id="div1" class="container mt-5 bg-gray">
+    <h1>Welcome to the Home Page!</h1>
+    <form class="logout" method="post" action="/logout">
+      <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+    <form  method="post" action="/about">
+      <a style="text-decoration: none;" href="https://geomanuk20.github.io/personal-website/">portfolio</a>
+      <button type="submit" class="btn btn-primary">about</button>
+    </form>
+    <h4>hi <%= name %></h4>
+    <form method="post" action="/calculate-sum">
+      <button  class="btn-danger">sum</button>
+    </form>
+  
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    background-color:gainsboro;
+    padding: 50px;
+}
+
+.container{
+    max-width: 400px;
+}
+#div1{
+    width: 500px;
+    height: 300px;
+    border: 2px solid gray;
+    background-color:dimgrey;
+    border-radius: 5px;
+}
+#div2{
+    width: 800px;
+    height: 500px;
+    border: 2px solid cornsilk;
+    background-color: burlywood;
+}
+.logout{
+    float:right;
+    margin-top: 25px;
+}
